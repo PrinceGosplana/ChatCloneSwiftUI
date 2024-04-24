@@ -26,7 +26,7 @@ struct LoginView: View {
                         .font(.largeTitle)
                         .fontWeight(.semibold)
 
-                    VStack(spacing: 20) {
+                    VStack(spacing: 40) {
                         CustomTextField(
                             imageName: "envelope",
                             placeholderText: "Email",
@@ -42,8 +42,6 @@ struct LoginView: View {
                         )
                     }
                     .padding([.top, .horizontal], 32)
-
-
                 }
                 .padding(.leading)
 
@@ -79,12 +77,13 @@ struct LoginView: View {
 
                 NavigationLink {
                     RegistrationView()
+                        .navigationBarBackButtonHidden()
                 } label: {
-
                     HStack {
                         Text("Don't have an account?")
 
                         Text("Sign Up")
+                            .fontWeight(.semibold)
                     }
                     .font(.footnote)
                 }
