@@ -10,9 +10,6 @@ import SwiftUI
 struct EditProfile: View {
 
     @State private var fullName = "Freddy Kruger"
-    @State private var showImagePicker = false
-    @State private var selectedImage: UIImage?
-    @State private var profileImage: Image?
 
     var body: some View {
         ZStack {
@@ -22,36 +19,7 @@ struct EditProfile: View {
             VStack(alignment: .leading, spacing: 44) {
 
                 VStack {
-                    HStack {
-                        VStack {
-                            if let profileImage {
-                                profileImage
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 64, height: 64)
-                                    .clipShape(Circle())
-                            } else {
-                                Image(systemName: "person.fill")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 64, height: 64)
-                                    .clipShape(Circle())
-                            }
-
-                            Button("Edit") {
-                                showImagePicker.toggle()
-                            }
-                            .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
-                                ImagePicker(image: $selectedImage)
-                            }
-                        }
-                        .padding(.top)
-
-                        Text("Enter your name or change your profile photo")
-                            .font(.headline)
-                            .foregroundStyle(.gray)
-                            .padding([.bottom, .horizontal])
-                    }
+                    ProfileHeader()
 
                     Divider()
                         .padding(.horizontal)
@@ -91,27 +59,7 @@ struct EditProfile: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 
-    private func loadImage() {
-        guard let selectedImage else { return }
-        profileImage = Image(uiImage: selectedImage)
-    }
 
-    private func updateProfileImagel() -> some View {
-        if let profileImage {
-            return profileImage
-                .resizable()
-                .scaledToFit()
-                .frame(width: 64, height: 64)
-                .clipShape(Circle())
-        } else {
-            return Image(systemName: "person.fill")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 64, height: 64)
-                .clipShape(Circle())
-        }
-
-    }
 }
 
 #Preview {

@@ -28,6 +28,7 @@
 		8AD09DEF2BDA83E3008E56D1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DEE2BDA83E3008E56D1 /* StatusCell.swift */; };
 		8AD09DF12BDA8855008E56D1 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */; };
 		8AD09DF42BDA8BAA008E56D1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DF32BDA8BAA008E56D1 /* ImagePicker.swift */; };
+		8AD09DF62BDAAD1D008E56D1 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DF52BDAAD1D008E56D1 /* ProfileHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		8AD09DEE2BDA83E3008E56D1 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
 		8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
 		8AD09DF32BDA8BAA008E56D1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8AD09DF52BDAAD1D008E56D1 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				8AD09DED2BDA83D7008E56D1 /* Cells */,
 				8AD09DE72BDA655D008E56D1 /* EditProfile.swift */,
+				8AD09DF52BDAAD1D008E56D1 /* ProfileHeader.swift */,
 				8AD09DE02BDA426F008E56D1 /* SettingsHeader.swift */,
 				8AD09DD92BD9FE7D008E56D1 /* SettingsView.swift */,
 				8AD09DE92BDA774F008E56D1 /* StatusSelector.swift */,
@@ -308,6 +311,7 @@
 				8AD09DE52BDA4D80008E56D1 /* SettingsType.swift in Sources */,
 				8AD09DE32BDA43B3008E56D1 /* SettingsCell.swift in Sources */,
 				8AD09DF42BDA8BAA008E56D1 /* ImagePicker.swift in Sources */,
+				8AD09DF62BDAAD1D008E56D1 /* ProfileHeader.swift in Sources */,
 				8AD09DD82BD9FE72008E56D1 /* ChannelsView.swift in Sources */,
 				8AD09DE82BDA655D008E56D1 /* EditProfile.swift in Sources */,
 				8AD09DDF2BD9FEAD008E56D1 /* ConversationsView.swift in Sources */,
