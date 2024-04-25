@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsCell: View {
 
-    let viewModel: SettingsCellViewModel
+    let viewModel: SettingsType
 
     var body: some View {
         VStack {
@@ -44,5 +44,5 @@ struct SettingsCell: View {
 }
 
 #Preview {
-    SettingsCell(viewModel: SettingsCellViewModel.allCases[0])
+    SettingsCell(viewModel: SettingsType.allCases[0])
 }

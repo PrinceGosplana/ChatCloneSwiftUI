@@ -17,10 +17,15 @@ struct SettingsView: View {
 
             VStack(spacing: 32) {
 
-                SettingsHeader()
+                NavigationLink {
+                    EditProfile()
+                } label: {
+                    SettingsHeader()
+                }
+
 
                 VStack(spacing: 1) {
-                    ForEach(SettingsCellViewModel.allCases) { viewModel in
+                    ForEach(SettingsType.allCases) { viewModel in
                         SettingsCell(viewModel: viewModel)
                     }
                 }

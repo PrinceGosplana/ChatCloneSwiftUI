@@ -20,6 +20,7 @@ struct SettingsHeader: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Eddie Brock")
                         .font(.title3)
+                        .foregroundStyle(.black)
 
                     Text("Available")
                         .foregroundStyle(.gray)

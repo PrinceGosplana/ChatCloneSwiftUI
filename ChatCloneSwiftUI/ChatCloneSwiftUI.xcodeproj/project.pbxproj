@@ -21,7 +21,13 @@
 		8AD09DDF2BD9FEAD008E56D1 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DDE2BD9FEAD008E56D1 /* ConversationsView.swift */; };
 		8AD09DE12BDA426F008E56D1 /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DE02BDA426F008E56D1 /* SettingsHeader.swift */; };
 		8AD09DE32BDA43B3008E56D1 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DE22BDA43B3008E56D1 /* SettingsCell.swift */; };
-		8AD09DE52BDA4D80008E56D1 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DE42BDA4D80008E56D1 /* SettingsCellViewModel.swift */; };
+		8AD09DE52BDA4D80008E56D1 /* SettingsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DE42BDA4D80008E56D1 /* SettingsType.swift */; };
+		8AD09DE82BDA655D008E56D1 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DE72BDA655D008E56D1 /* EditProfile.swift */; };
+		8AD09DEA2BDA774F008E56D1 /* StatusSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DE92BDA774F008E56D1 /* StatusSelector.swift */; };
+		8AD09DEC2BDA8189008E56D1 /* UserStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DEB2BDA8189008E56D1 /* UserStatus.swift */; };
+		8AD09DEF2BDA83E3008E56D1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DEE2BDA83E3008E56D1 /* StatusCell.swift */; };
+		8AD09DF12BDA8855008E56D1 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */; };
+		8AD09DF42BDA8BAA008E56D1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DF32BDA8BAA008E56D1 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +46,13 @@
 		8AD09DDE2BD9FEAD008E56D1 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		8AD09DE02BDA426F008E56D1 /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		8AD09DE22BDA43B3008E56D1 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
-		8AD09DE42BDA4D80008E56D1 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
+		8AD09DE42BDA4D80008E56D1 /* SettingsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsType.swift; sourceTree = "<group>"; };
+		8AD09DE72BDA655D008E56D1 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		8AD09DE92BDA774F008E56D1 /* StatusSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusSelector.swift; sourceTree = "<group>"; };
+		8AD09DEB2BDA8189008E56D1 /* UserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatus.swift; sourceTree = "<group>"; };
+		8AD09DEE2BDA83E3008E56D1 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
+		8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		8AD09DF32BDA8BAA008E56D1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD09DCF2BD92E26008E56D1 /* CustomTextField.swift */,
+				8AD09DF32BDA8BAA008E56D1 /* ImagePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -132,7 +145,8 @@
 		8AD09DC82BD8BB5E008E56D1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				8AD09DE42BDA4D80008E56D1 /* SettingsCellViewModel.swift */,
+				8AD09DF22BDA8872008E56D1 /* Enums */,
+				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,9 +187,11 @@
 		8AD09DD52BD9FE54008E56D1 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				8AD09DE22BDA43B3008E56D1 /* SettingsCell.swift */,
+				8AD09DED2BDA83D7008E56D1 /* Cells */,
+				8AD09DE72BDA655D008E56D1 /* EditProfile.swift */,
 				8AD09DE02BDA426F008E56D1 /* SettingsHeader.swift */,
 				8AD09DD92BD9FE7D008E56D1 /* SettingsView.swift */,
+				8AD09DE92BDA774F008E56D1 /* StatusSelector.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -194,6 +210,24 @@
 				8AD09DDE2BD9FEAD008E56D1 /* ConversationsView.swift */,
 			);
 			path = Conversations;
+			sourceTree = "<group>";
+		};
+		8AD09DED2BDA83D7008E56D1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8AD09DE22BDA43B3008E56D1 /* SettingsCell.swift */,
+				8AD09DEE2BDA83E3008E56D1 /* StatusCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8AD09DF22BDA8872008E56D1 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8AD09DE42BDA4D80008E56D1 /* SettingsType.swift */,
+				8AD09DEB2BDA8189008E56D1 /* UserStatus.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD09DEC2BDA8189008E56D1 /* UserStatus.swift in Sources */,
+				8AD09DEA2BDA774F008E56D1 /* StatusSelector.swift in Sources */,
 				8AD09DCB2BD91A45008E56D1 /* LoginView.swift in Sources */,
 				8AD09DDA2BD9FE7D008E56D1 /* SettingsView.swift in Sources */,
-				8AD09DE52BDA4D80008E56D1 /* SettingsCellViewModel.swift in Sources */,
+				8AD09DEF2BDA83E3008E56D1 /* StatusCell.swift in Sources */,
+				8AD09DE52BDA4D80008E56D1 /* SettingsType.swift in Sources */,
 				8AD09DE32BDA43B3008E56D1 /* SettingsCell.swift in Sources */,
+				8AD09DF42BDA8BAA008E56D1 /* ImagePicker.swift in Sources */,
 				8AD09DD82BD9FE72008E56D1 /* ChannelsView.swift in Sources */,
+				8AD09DE82BDA655D008E56D1 /* EditProfile.swift in Sources */,
 				8AD09DDF2BD9FEAD008E56D1 /* ConversationsView.swift in Sources */,
 				8AD09DB92BD80A97008E56D1 /* ContentView.swift in Sources */,
 				8AD09DDC2BD9FE8C008E56D1 /* ChatView.swift in Sources */,
@@ -278,6 +317,7 @@
 				8AD09DCD2BD91A56008E56D1 /* RegistrationView.swift in Sources */,
 				8AD09DD02BD92E26008E56D1 /* CustomTextField.swift in Sources */,
 				8AD09DE12BDA426F008E56D1 /* SettingsHeader.swift in Sources */,
+				8AD09DF12BDA8855008E56D1 /* StatusViewModel.swift in Sources */,
 				8AD09DD32BD97065008E56D1 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  SettingsCellViewModel.swift
+//  SettingsType.swift
 //  ChatCloneSwiftUI
 //
 //  Created by Oleksandr Isaiev on 25.04.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum SettingsCellViewModel: Int, CaseIterable, Identifiable {
+enum SettingsType: Int, CaseIterable, Identifiable {
 
     case account, notifications, startedMessages
 
