@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A9F40272BDBF04600EF15C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9F40262BDBF04600EF15C6 /* GoogleService-Info.plist */; };
 		8AD09DB72BD80A97008E56D1 /* ChatCloneSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DB62BD80A97008E56D1 /* ChatCloneSwiftUIApp.swift */; };
 		8AD09DB92BD80A97008E56D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09DB82BD80A97008E56D1 /* ContentView.swift */; };
 		8AD09DBB2BD80A9A008E56D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AD09DBA2BD80A9A008E56D1 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A9F40262BDBF04600EF15C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8AD09DB32BD80A97008E56D1 /* ChatCloneSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatCloneSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD09DB62BD80A97008E56D1 /* ChatCloneSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCloneSwiftUIApp.swift; sourceTree = "<group>"; };
 		8AD09DB82BD80A97008E56D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				8AD09DCE2BD91E1B008E56D1 /* App */,
 				8AD09DC42BD8BB28008E56D1 /* API */,
 				8AD09DBA2BD80A9A008E56D1 /* Assets.xcassets */,
+				8A9F40262BDBF04600EF15C6 /* GoogleService-Info.plist */,
 				8AD09DB82BD80A97008E56D1 /* ContentView.swift */,
 				8AD09DC62BD8BB38008E56D1 /* Model */,
 				8AD09DBC2BD80A9A008E56D1 /* Preview Content */,
@@ -331,6 +334,7 @@
 			files = (
 				8AD09DBE2BD80A9A008E56D1 /* Preview Assets.xcassets in Resources */,
 				8AD09DBB2BD80A9A008E56D1 /* Assets.xcassets in Resources */,
+				8A9F40272BDBF04600EF15C6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
