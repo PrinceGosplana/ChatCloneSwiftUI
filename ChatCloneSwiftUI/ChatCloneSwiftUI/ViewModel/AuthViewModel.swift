@@ -29,6 +29,16 @@ final class AuthViewModel: NSObject, ObservableObject, AuthProtocol {
 //            }
 //
 //            // succesfully register user
+//        guard let user = result?.user else { return }
+//        let data: [String: Any] = [
+//            "email": email,
+//            "username": userName,
+//            "fullname": fullName
+//        ]
+//
+//        Firestore.firestore().collectijon("users").document(user.uid).setData(data) { _ in
+//            
+//        }
 //        }
     }
 
