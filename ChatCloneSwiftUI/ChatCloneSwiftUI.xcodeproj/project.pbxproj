@@ -40,7 +40,7 @@
 		8AD09E072BDBB059008E56D1 /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E062BDBB059008E56D1 /* CustomInput.swift */; };
 		8AD09E092BDBBF8C008E56D1 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */; };
 		8AD09E0B2BDBC05D008E56D1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */; };
-		95C1D3722BDC04B000A11C3E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 95C1D3712BDC04B000A11C3E /* FirebaseAuth */; };
+		8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +78,7 @@
 		8AD09E062BDBB059008E56D1 /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
 		8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C1D3722BDC04B000A11C3E /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +179,7 @@
 				8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */,
 				8AD09DF22BDA8872008E56D1 /* Enums */,
 				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
+				8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,7 +302,6 @@
 			);
 			name = ChatCloneSwiftUI;
 			packageProductDependencies = (
-				95C1D3712BDC04B000A11C3E /* FirebaseAuth */,
 			);
 			productName = ChatCloneSwiftUI;
 			productReference = 8AD09DB32BD80A97008E56D1 /* ChatCloneSwiftUI.app */;
@@ -332,7 +332,7 @@
 			);
 			mainGroup = 8AD09DAA2BD80A97008E56D1;
 			packageReferences = (
-				95C1D3652BDC049500A11C3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8AD92E7A2BDE68E00099F2BB /* XCRemoteSwiftPackageReference "FirebaseLibrary" */,
 			);
 			productRefGroup = 8AD09DB42BD80A97008E56D1 /* Products */;
 			projectDirPath = "";
@@ -387,6 +387,7 @@
 				8AD09E052BDBA959008E56D1 /* Message.swift in Sources */,
 				8AD09E012BDBA0DF008E56D1 /* Extensions.swift in Sources */,
 				8AD09DE12BDA426F008E56D1 /* SettingsHeader.swift in Sources */,
+				8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */,
 				8AD09DF12BDA8855008E56D1 /* StatusViewModel.swift in Sources */,
 				8AD09DD32BD97065008E56D1 /* MainTabView.swift in Sources */,
 				8AD09E0B2BDBC05D008E56D1 /* ChatViewModel.swift in Sources */,
@@ -449,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -506,7 +507,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -531,6 +532,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,6 +561,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,23 +599,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		95C1D3652BDC049500A11C3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		8AD92E7A2BDE68E00099F2BB /* XCRemoteSwiftPackageReference "FirebaseLibrary" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "git@github.com:PrinceGosplana/FirebaseLibrary.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.24.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		95C1D3712BDC04B000A11C3E /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95C1D3652BDC049500A11C3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8AD09DAB2BD80A97008E56D1 /* Project object */;
 }
