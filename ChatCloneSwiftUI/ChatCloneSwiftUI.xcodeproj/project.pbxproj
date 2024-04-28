@@ -41,6 +41,7 @@
 		8AD09E092BDBBF8C008E56D1 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */; };
 		8AD09E0B2BDBC05D008E56D1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */; };
 		8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */; };
+		8AD92E7E2BDE8ED50099F2BB /* ProfilePhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			children = (
 				8AD09DCA2BD91A45008E56D1 /* LoginView.swift */,
 				8AD09DCC2BD91A56008E56D1 /* RegistrationView.swift */,
+				8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */,
 			);
 			path = Authentikation;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				8AD09DD82BD9FE72008E56D1 /* ChannelsView.swift in Sources */,
 				8AD09DFD2BDB8593008E56D1 /* UserCell.swift in Sources */,
 				8AD09DE82BDA655D008E56D1 /* EditProfile.swift in Sources */,
+				8AD92E7E2BDE8ED50099F2BB /* ProfilePhotoSelector.swift in Sources */,
 				8AD09DDF2BD9FEAD008E56D1 /* ConversationsView.swift in Sources */,
 				8AD09DB92BD80A97008E56D1 /* ContentView.swift in Sources */,
 				8AD09DDC2BD9FE8C008E56D1 /* ChatView.swift in Sources */,
