@@ -11,6 +11,7 @@ struct LoginView: View {
 
     @State private var email = ""
     @State private var password = ""
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
         NavigationStack {
@@ -96,4 +97,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environmentObject(MockAuthViewModel())
 }

@@ -14,7 +14,7 @@ struct RegistrationView: View {
     @State private var password = ""
     @State private var fullName = ""
     @State private var userName = ""
-    @ObservedObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
 
     var body: some View {
         VStack {
@@ -103,4 +103,5 @@ struct RegistrationView: View {
 
 #Preview {
     RegistrationView()
+        .environmentObject(MockAuthViewModel())
 }

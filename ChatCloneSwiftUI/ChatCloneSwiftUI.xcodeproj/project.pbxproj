@@ -42,6 +42,8 @@
 		8AD09E0B2BDBC05D008E56D1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */; };
 		8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */; };
 		8AD92E7E2BDE8ED50099F2BB /* ProfilePhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */; };
+		8AD92E802BDFB57B0099F2BB /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */; };
+		8AD92E822BDFBFC70099F2BB /* MockAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E812BDFBFC70099F2BB /* MockAuthViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelector.swift; sourceTree = "<group>"; };
+		8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		8AD92E812BDFBFC70099F2BB /* MockAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		8AD09DC42BD8BB28008E56D1 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				8AD09DF22BDA8872008E56D1 /* Enums */,
 				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
 				8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */,
+				8AD92E812BDFBFC70099F2BB /* MockAuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD92E822BDFBFC70099F2BB /* MockAuthViewModel.swift in Sources */,
 				8AD09DEC2BDA8189008E56D1 /* UserStatus.swift in Sources */,
 				8AD09E032BDBA541008E56D1 /* ChatBubble.swift in Sources */,
 				8AD09DEA2BDA774F008E56D1 /* StatusSelector.swift in Sources */,
@@ -378,6 +385,7 @@
 				8AD09DE32BDA43B3008E56D1 /* SettingsCell.swift in Sources */,
 				8AD09DF42BDA8BAA008E56D1 /* ImagePicker.swift in Sources */,
 				8AD09DF62BDAAD1D008E56D1 /* ProfileHeader.swift in Sources */,
+				8AD92E802BDFB57B0099F2BB /* ImageUploader.swift in Sources */,
 				8AD09DD82BD9FE72008E56D1 /* ChannelsView.swift in Sources */,
 				8AD09DFD2BDB8593008E56D1 /* UserCell.swift in Sources */,
 				8AD09DE82BDA655D008E56D1 /* EditProfile.swift in Sources */,

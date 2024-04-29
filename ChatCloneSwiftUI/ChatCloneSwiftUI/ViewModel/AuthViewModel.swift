@@ -6,18 +6,19 @@
 //
 
 //import Firebase
-import Foundation
+import UIKit
 
 protocol AuthProtocol {
     func logIn()
     func register(withEmail email: String, password: String, fullName: String, userName: String)
-    func uploadProfileImage()
+    func uploadProfileImage(_ image: UIImage)
     func signOut()
 }
 
 final class AuthViewModel: NSObject, ObservableObject, AuthProtocol {
 
     @Published var didAuthenticateUser = false
+//    private var tempCurrentUser: FirebaseAuth.User?
 
     func logIn() {
 
@@ -39,13 +40,19 @@ final class AuthViewModel: NSObject, ObservableObject, AuthProtocol {
 //        ]
 //
 //        Firestore.firestore().collectijon("users").document(user.uid).setData(data) { _ in
+//        self.tempCurrentUser = user
             didAuthenticateUser = true
 //        }
 //        }
     }
 
-    func uploadProfileImage() {
-
+    func uploadProfileImage(_ image: UIImage) {
+//        guard let uid = tempCurrentUser?.uid { return }
+//        ImageUploader.uploadImage(image: image) { imageUrl in
+//            Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": imageUrl]) { _ in
+//                print("Succesfully updated user data...")
+//            }
+//        }
     }
 
     func signOut() {
