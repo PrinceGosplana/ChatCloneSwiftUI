@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct SettingsHeader: View {
+
+    private let user: User
+
+    init(user: User) {
+        self.user = user
+    }
+
     var body: some View {
             HStack {
                 Image(.profilePicture)
@@ -18,7 +25,7 @@ struct SettingsHeader: View {
                     .padding(.leading)
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Eddie Brock")
+                    Text(user.fullName)
                         .font(.title3)
                         .foregroundStyle(.black)
 
@@ -35,5 +42,5 @@ struct SettingsHeader: View {
 }
 
 #Preview {
-    SettingsHeader()
+    SettingsHeader(user: User.mockUser)
 }

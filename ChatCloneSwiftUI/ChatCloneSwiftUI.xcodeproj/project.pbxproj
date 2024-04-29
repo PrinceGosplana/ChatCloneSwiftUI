@@ -46,6 +46,7 @@
 		8AD92E852BDFCB410099F2BB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E842BDFCB410099F2BB /* AuthService.swift */; };
 		8AD92E882BDFCBA00099F2BB /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */; };
 		8AD92E8A2BDFCC6E0099F2BB /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */; };
+		8AD92E8C2BDFE42C0099F2BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8B2BDFE42C0099F2BB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		8AD92E842BDFCB410099F2BB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
+		8AD92E8B2BDFE42C0099F2BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */,
+				8AD92E8B2BDFE42C0099F2BB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				8AD09DDF2BD9FEAD008E56D1 /* ConversationsView.swift in Sources */,
 				8AD09DB92BD80A97008E56D1 /* ContentView.swift in Sources */,
 				8AD09DDC2BD9FE8C008E56D1 /* ChatView.swift in Sources */,
+				8AD92E8C2BDFE42C0099F2BB /* User.swift in Sources */,
 				8AD09DB72BD80A97008E56D1 /* ChatCloneSwiftUIApp.swift in Sources */,
 				8AD09DCD2BD91A56008E56D1 /* RegistrationView.swift in Sources */,
 				8AD92E882BDFCBA00099F2BB /* AuthServiceProtocol.swift in Sources */,

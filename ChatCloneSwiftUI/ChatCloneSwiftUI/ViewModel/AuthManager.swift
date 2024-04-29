@@ -15,12 +15,15 @@ final class AuthManager: NSObject, ObservableObject {
 //    @Published var userSession: FirebaseAuth.User?
     @Published var userSession: Bool
     @Published var didAuthenticateUser = false
+    @Published var currentUser: User?
     private let service: AuthServiceProtocol
 //    private var tempCurrentUser: FirebaseAuth.User?
 
-    init(service: AuthServiceProtocol) {
+    init(service: AuthServiceProtocol)  {
         self.service = service
         userSession = false
+        super.init()
+        Task { await fetchUser() }
 //        if let currentUid = Auth.auth().currentUser?.uid {
 //            authState = .authenticated(currentUid)
 //        }
@@ -55,6 +58,14 @@ final class AuthManager: NSObject, ObservableObject {
     func signOut() async {
         userSession = false
         await service.signOut()
+    }
+
+    func fetchUser() async {
+        do {
+            currentUser = try await service.fetchUser()
+        } catch {
+            print("Error with fetch user profile \(error.localizedDescription)")
+        }
     }
 
 }

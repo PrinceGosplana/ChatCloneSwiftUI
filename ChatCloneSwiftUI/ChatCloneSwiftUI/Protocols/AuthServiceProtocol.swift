@@ -12,4 +12,5 @@ protocol AuthServiceProtocol {
     func register(withEmail email: String, password: String, fullName: String, userName: String) async throws -> String
     func uploadProfileImage(_ image: UIImage) async throws -> String
     func signOut() async
+    func fetchUser() async throws -> User
 }

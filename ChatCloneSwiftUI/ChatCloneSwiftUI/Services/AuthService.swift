@@ -49,4 +49,8 @@ actor AuthService: AuthServiceProtocol {
 //            print("Failed to signup with error \(error)")
 //        }
     }
+
+    func fetchUser() async throws -> User {
+        User.mockUser
+    }
 }

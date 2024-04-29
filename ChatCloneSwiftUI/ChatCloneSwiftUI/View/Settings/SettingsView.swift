@@ -11,6 +11,12 @@ struct SettingsView: View {
 
     @EnvironmentObject var authManager: AuthManager
 
+    private let user: User
+
+    init(user: User) {
+        self.user = user
+    }
+    
     var body: some View {
         ZStack {
             Color(.systemGroupedBackground)
@@ -21,7 +27,7 @@ struct SettingsView: View {
                 NavigationLink {
                     EditProfile()
                 } label: {
-                    SettingsHeader()
+                    SettingsHeader(user: user)
                 }
 
 
@@ -48,6 +54,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(user: User.mockUser)
         .environmentObject(AuthManager(service: MockAuthService()))
 }
