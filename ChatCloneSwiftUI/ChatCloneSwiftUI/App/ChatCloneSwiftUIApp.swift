@@ -16,7 +16,7 @@ struct ChatCloneSwiftUIApp: App {
 //    }
     var body: some Scene {
         WindowGroup {
-            LoginView().environmentObject(AuthViewModel(service: AuthService()))
+            ContentView().environmentObject(AuthManager(service: AuthService()))
         }
     }
 }

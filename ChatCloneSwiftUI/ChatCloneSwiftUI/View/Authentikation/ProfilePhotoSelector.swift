@@ -12,7 +12,7 @@ struct ProfilePhotoSelector: View {
     @State private var imagePickerPresented = false
     @State private var selectedImage: UIImage?
     @State private var profileImage: Image?
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthManager
 
     var body: some View {
         VStack {
@@ -70,5 +70,5 @@ struct ProfilePhotoSelector: View {
 
 #Preview {
     ProfilePhotoSelector()
-        .environmentObject(AuthViewModel(service: MockAuthService()))
+        .environmentObject(AuthManager(service: MockAuthService()))
 }

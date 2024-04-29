@@ -1,5 +1,5 @@
 //
-//  AuthViewModel.swift
+//  AuthManager.swift
 //  ChatCloneSwiftUI
 //
 //  Created by Oleksandr Isaiev on 28.04.2024.
@@ -10,7 +10,7 @@ import UIKit
 
 
 @MainActor
-final class AuthViewModel: NSObject, ObservableObject {
+final class AuthManager: NSObject, ObservableObject {
 
 //    @Published var userSession: FirebaseAuth.User?
     @Published var userSession: Bool

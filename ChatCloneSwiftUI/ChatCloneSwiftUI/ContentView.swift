@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
+    @EnvironmentObject var viewModel: AuthManager
 
     var body: some View {
         Group {
@@ -23,5 +23,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-        .environmentObject(AuthViewModel(service: MockAuthService()))
+        .environmentObject(AuthManager(service: MockAuthService()))
 }

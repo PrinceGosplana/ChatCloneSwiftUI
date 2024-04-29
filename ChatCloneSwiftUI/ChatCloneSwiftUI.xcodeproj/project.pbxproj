@@ -40,7 +40,7 @@
 		8AD09E072BDBB059008E56D1 /* CustomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E062BDBB059008E56D1 /* CustomInput.swift */; };
 		8AD09E092BDBBF8C008E56D1 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */; };
 		8AD09E0B2BDBC05D008E56D1 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */; };
-		8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */; };
+		8AD92E7C2BDE6D290099F2BB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7B2BDE6D290099F2BB /* AuthManager.swift */; };
 		8AD92E7E2BDE8ED50099F2BB /* ProfilePhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */; };
 		8AD92E802BDFB57B0099F2BB /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */; };
 		8AD92E852BDFCB410099F2BB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E842BDFCB410099F2BB /* AuthService.swift */; };
@@ -83,7 +83,7 @@
 		8AD09E062BDBB059008E56D1 /* CustomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInput.swift; sourceTree = "<group>"; };
 		8AD09E082BDBBF8C008E56D1 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		8AD92E7B2BDE6D290099F2BB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelector.swift; sourceTree = "<group>"; };
 		8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		8AD92E842BDFCB410099F2BB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -192,7 +192,7 @@
 				8AD09E0A2BDBC05D008E56D1 /* ChatViewModel.swift */,
 				8AD09DF22BDA8872008E56D1 /* Enums */,
 				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
-				8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */,
+				8AD92E7B2BDE6D290099F2BB /* AuthManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 				8AD92E852BDFCB410099F2BB /* AuthService.swift in Sources */,
 				8AD09E012BDBA0DF008E56D1 /* Extensions.swift in Sources */,
 				8AD09DE12BDA426F008E56D1 /* SettingsHeader.swift in Sources */,
-				8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */,
+				8AD92E7C2BDE6D290099F2BB /* AuthManager.swift in Sources */,
 				8AD09DF12BDA8855008E56D1 /* StatusViewModel.swift in Sources */,
 				8AD09DD32BD97065008E56D1 /* MainTabView.swift in Sources */,
 				8AD09E0B2BDBC05D008E56D1 /* ChatViewModel.swift in Sources */,
