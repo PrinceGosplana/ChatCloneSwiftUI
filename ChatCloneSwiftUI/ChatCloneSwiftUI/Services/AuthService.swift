@@ -8,9 +8,10 @@
 import UIKit
 
 actor AuthService: AuthServiceProtocol {
-    func logIn() async {
+    func logIn(withEmail email: String, password: String) async throws -> String {
 //        let result = try await Auth.auth().signIn(withEmail: email, password: password)
 //        return result.user.uid
+        NSUUID().uuidString
     }
     
     func register(withEmail email: String, password: String, fullName: String, userName: String) async throws -> String {

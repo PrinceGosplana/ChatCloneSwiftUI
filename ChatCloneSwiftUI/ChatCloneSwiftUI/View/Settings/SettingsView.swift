@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
 
+    @EnvironmentObject var authManager: AuthManager
 
     var body: some View {
         ZStack {
@@ -31,7 +32,7 @@ struct SettingsView: View {
                 }
 
                 Button {
-
+                    Task { await authManager.signOut() }
                 } label: {
                     Text("Log Out")
                         .foregroundStyle(.red)
@@ -48,4 +49,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+        .environmentObject(AuthManager(service: MockAuthService()))
 }

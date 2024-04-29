@@ -26,9 +26,13 @@ final class AuthManager: NSObject, ObservableObject {
 //        }
     }
 
-    func logIn() async {
-        await service.logIn()
-        userSession = true
+    func logIn(withEmail email: String, password: String) async {
+        do {
+            let uid = try await service.logIn(withEmail: email, password: password)
+            userSession = true
+        } catch {
+            print("Error with user login \(error.localizedDescription)")
+        }
     }
 
     func register(withEmail email: String, password: String, fullName: String, userName: String) async {

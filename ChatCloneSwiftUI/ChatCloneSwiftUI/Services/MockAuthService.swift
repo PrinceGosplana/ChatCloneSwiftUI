@@ -8,8 +8,8 @@
 import UIKit
 
 actor MockAuthService: AuthServiceProtocol {
-    func logIn() async {
-
+    func logIn(withEmail email: String, password: String) async throws -> String {
+        NSUUID().uuidString
     }
 
     func register(withEmail email: String, password: String, fullName: String, userName: String) async throws -> String {
