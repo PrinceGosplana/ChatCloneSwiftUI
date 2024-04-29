@@ -11,6 +11,8 @@ struct NewMessage: View {
     @State private var searchText = ""
     @State private var isEditing = false
     @Binding var showChatView: Bool
+    @ObservedObject var viewModel = NewMessageViewModel()
+
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -22,12 +24,12 @@ struct NewMessage: View {
             
             VStack(alignment: .leading) {
 
-                ForEach((0 ... 10), id: \.self) { _ in
+                ForEach(viewModel.users) { user in
                     Button {
                         showChatView.toggle()
                         dismiss()
                     } label: {
-                        UserCell()
+                        UserCell(user: user)
                     }
                 }
             }

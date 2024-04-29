@@ -54,6 +54,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(user: User.mockUser)
+    SettingsView(user: User.mockUsers[3])
         .environmentObject(AuthManager(service: MockAuthService()))
 }

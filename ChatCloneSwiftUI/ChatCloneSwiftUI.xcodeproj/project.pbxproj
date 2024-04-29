@@ -47,6 +47,7 @@
 		8AD92E882BDFCBA00099F2BB /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */; };
 		8AD92E8A2BDFCC6E0099F2BB /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */; };
 		8AD92E8C2BDFE42C0099F2BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8B2BDFE42C0099F2BB /* User.swift */; };
+		8AD92E8E2BE014200099F2BB /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
 		8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
 		8AD92E8B2BDFE42C0099F2BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 				8AD09DF22BDA8872008E56D1 /* Enums */,
 				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
 				8AD92E7B2BDE6D290099F2BB /* AuthManager.swift */,
+				8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD09DEC2BDA8189008E56D1 /* UserStatus.swift in Sources */,
+				8AD92E8E2BE014200099F2BB /* NewMessageViewModel.swift in Sources */,
 				8AD09E032BDBA541008E56D1 /* ChatBubble.swift in Sources */,
 				8AD09DEA2BDA774F008E56D1 /* StatusSelector.swift in Sources */,
 				8AD09DCB2BD91A45008E56D1 /* LoginView.swift in Sources */,

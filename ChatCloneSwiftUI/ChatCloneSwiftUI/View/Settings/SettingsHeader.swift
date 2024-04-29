@@ -42,5 +42,5 @@ struct SettingsHeader: View {
 }
 
 #Preview {
-    SettingsHeader(user: User.mockUser)
+    SettingsHeader(user: User.mockUsers[0])
 }
