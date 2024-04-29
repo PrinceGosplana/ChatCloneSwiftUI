@@ -43,7 +43,9 @@
 		8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */; };
 		8AD92E7E2BDE8ED50099F2BB /* ProfilePhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */; };
 		8AD92E802BDFB57B0099F2BB /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */; };
-		8AD92E822BDFBFC70099F2BB /* MockAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E812BDFBFC70099F2BB /* MockAuthViewModel.swift */; };
+		8AD92E852BDFCB410099F2BB /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E842BDFCB410099F2BB /* AuthService.swift */; };
+		8AD92E882BDFCBA00099F2BB /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */; };
+		8AD92E8A2BDFCC6E0099F2BB /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +86,9 @@
 		8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		8AD92E7D2BDE8ED50099F2BB /* ProfilePhotoSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelector.swift; sourceTree = "<group>"; };
 		8AD92E7F2BDFB57B0099F2BB /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
-		8AD92E812BDFBFC70099F2BB /* MockAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthViewModel.swift; sourceTree = "<group>"; };
+		8AD92E842BDFCB410099F2BB /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 		8AD09DB52BD80A97008E56D1 /* ChatCloneSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8AD92E862BDFCB820099F2BB /* Protocols */,
+				8AD92E832BDFCB1E0099F2BB /* Services */,
 				8AD09DCE2BD91E1B008E56D1 /* App */,
 				8AD09DC42BD8BB28008E56D1 /* API */,
 				8AD09DBA2BD80A9A008E56D1 /* Assets.xcassets */,
@@ -187,7 +193,6 @@
 				8AD09DF22BDA8872008E56D1 /* Enums */,
 				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
 				8AD92E7B2BDE6D290099F2BB /* AuthViewModel.swift */,
-				8AD92E812BDFBFC70099F2BB /* MockAuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,6 +292,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		8AD92E832BDFCB1E0099F2BB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8AD92E842BDFCB410099F2BB /* AuthService.swift */,
+				8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8AD92E862BDFCB820099F2BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8AD92E872BDFCBA00099F2BB /* AuthServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		95C1D3702BDC04B000A11C3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AD92E822BDFBFC70099F2BB /* MockAuthViewModel.swift in Sources */,
 				8AD09DEC2BDA8189008E56D1 /* UserStatus.swift in Sources */,
 				8AD09E032BDBA541008E56D1 /* ChatBubble.swift in Sources */,
 				8AD09DEA2BDA774F008E56D1 /* StatusSelector.swift in Sources */,
@@ -390,13 +411,16 @@
 				8AD09DFD2BDB8593008E56D1 /* UserCell.swift in Sources */,
 				8AD09DE82BDA655D008E56D1 /* EditProfile.swift in Sources */,
 				8AD92E7E2BDE8ED50099F2BB /* ProfilePhotoSelector.swift in Sources */,
+				8AD92E8A2BDFCC6E0099F2BB /* MockAuthService.swift in Sources */,
 				8AD09DDF2BD9FEAD008E56D1 /* ConversationsView.swift in Sources */,
 				8AD09DB92BD80A97008E56D1 /* ContentView.swift in Sources */,
 				8AD09DDC2BD9FE8C008E56D1 /* ChatView.swift in Sources */,
 				8AD09DB72BD80A97008E56D1 /* ChatCloneSwiftUIApp.swift in Sources */,
 				8AD09DCD2BD91A56008E56D1 /* RegistrationView.swift in Sources */,
+				8AD92E882BDFCBA00099F2BB /* AuthServiceProtocol.swift in Sources */,
 				8AD09DD02BD92E26008E56D1 /* CustomTextField.swift in Sources */,
 				8AD09E052BDBA959008E56D1 /* Message.swift in Sources */,
+				8AD92E852BDFCB410099F2BB /* AuthService.swift in Sources */,
 				8AD09E012BDBA0DF008E56D1 /* Extensions.swift in Sources */,
 				8AD09DE12BDA426F008E56D1 /* SettingsHeader.swift in Sources */,
 				8AD92E7C2BDE6D290099F2BB /* AuthViewModel.swift in Sources */,

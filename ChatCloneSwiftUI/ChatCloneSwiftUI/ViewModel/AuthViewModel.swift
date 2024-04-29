@@ -8,55 +8,49 @@
 //import Firebase
 import UIKit
 
-protocol AuthProtocol {
-    func logIn()
-    func register(withEmail email: String, password: String, fullName: String, userName: String)
-    func uploadProfileImage(_ image: UIImage)
-    func signOut()
-}
 
-final class AuthViewModel: NSObject, ObservableObject, AuthProtocol {
+@MainActor
+final class AuthViewModel: NSObject, ObservableObject {
 
+//    @Published var userSession: FirebaseAuth.User?
+    @Published var userSession: Bool
     @Published var didAuthenticateUser = false
+    private let service: AuthServiceProtocol
 //    private var tempCurrentUser: FirebaseAuth.User?
 
-    func logIn() {
-
-    }
-
-    func register(withEmail email: String, password: String, fullName: String, userName: String) {
-//        Auith.auth().createUser(withEmail: email, password: password) { result, error in
-//            if let error {
-//                // failed register
-//                return
-//            }
-//
-//            // succesfully register user
-//        guard let user = result?.user else { return }
-//        let data: [String: Any] = [
-//            "email": email,
-//            "username": userName,
-//            "fullname": fullName
-//        ]
-//
-//        Firestore.firestore().collectijon("users").document(user.uid).setData(data) { _ in
-//        self.tempCurrentUser = user
-            didAuthenticateUser = true
-//        }
+    init(service: AuthServiceProtocol) {
+        self.service = service
+        userSession = false
+//        if let currentUid = Auth.auth().currentUser?.uid {
+//            authState = .authenticated(currentUid)
 //        }
     }
 
-    func uploadProfileImage(_ image: UIImage) {
-//        guard let uid = tempCurrentUser?.uid { return }
-//        ImageUploader.uploadImage(image: image) { imageUrl in
-//            Firestore.firestore().collection("users").document(uid).updateData(["profileImageUrl": imageUrl]) { _ in
-//                print("Succesfully updated user data...")
-//            }
-//        }
+    func logIn() async {
+        await service.logIn()
+        userSession = true
     }
 
-    func signOut() {
+    func register(withEmail email: String, password: String, fullName: String, userName: String) async {
+        do {
+            let uid = try await service.register(withEmail: email, password: password, fullName: fullName, userName: userName)
+            userSession = true
+        } catch {
+            print("Error with user register \(error.localizedDescription)")
+        }
+    }
 
+    func uploadProfileImage(_ image: UIImage) async {
+        do {
+            let uid = try await service.uploadProfileImage(image)
+        } catch {
+            print("Error with upload profile image \(error.localizedDescription)")
+        }
+    }
+
+    func signOut() async {
+        userSession = false
+        await service.signOut()
     }
 
 }

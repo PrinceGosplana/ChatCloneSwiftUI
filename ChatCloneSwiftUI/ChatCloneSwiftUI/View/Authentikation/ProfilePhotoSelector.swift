@@ -43,7 +43,7 @@ struct ProfilePhotoSelector: View {
                 .font(.system(size: 20, weight: .semibold))
             if let image = selectedImage {
                 Button {
-                    viewModel.uploadProfileImage(image)
+                    Task { await viewModel.uploadProfileImage(image) }
                 } label: {
                     Text("Continue")
                         .font(.headline)
@@ -70,5 +70,5 @@ struct ProfilePhotoSelector: View {
 
 #Preview {
     ProfilePhotoSelector()
-        .environmentObject(MockAuthViewModel())
+        .environmentObject(AuthViewModel(service: MockAuthService()))
 }

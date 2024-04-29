@@ -62,12 +62,12 @@ struct RegistrationView: View {
             .padding(.leading)
 
             Button {
-                viewModel.register(
+                Task { await viewModel.register(
                     withEmail: email,
                     password: password,
                     fullName: fullName,
                     userName: userName
-                )
+                ) }
             } label: {
                 Text("Sign In")
                     .font(.headline)
@@ -103,5 +103,5 @@ struct RegistrationView: View {
 
 #Preview {
     RegistrationView()
-        .environmentObject(MockAuthViewModel())
+        .environmentObject(AuthViewModel(service: MockAuthService()))
 }

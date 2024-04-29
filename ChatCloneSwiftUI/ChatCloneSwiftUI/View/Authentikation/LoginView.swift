@@ -97,5 +97,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .environmentObject(MockAuthViewModel())
+        .environmentObject(AuthViewModel(service: MockAuthService()))
 }
