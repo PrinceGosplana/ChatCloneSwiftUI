@@ -17,6 +17,8 @@ protocol AuthProtocol {
 
 final class AuthViewModel: NSObject, ObservableObject, AuthProtocol {
 
+    @Published var didAuthenticateUser = false
+
     func logIn() {
 
     }
@@ -37,7 +39,7 @@ final class AuthViewModel: NSObject, ObservableObject, AuthProtocol {
 //        ]
 //
 //        Firestore.firestore().collectijon("users").document(user.uid).setData(data) { _ in
-//            
+            didAuthenticateUser = true
 //        }
 //        }
     }

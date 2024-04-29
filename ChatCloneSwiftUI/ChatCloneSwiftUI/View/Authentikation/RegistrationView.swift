@@ -95,6 +95,9 @@ struct RegistrationView: View {
             }
             .padding(.bottom, 32)
         }
+        .navigationDestination(isPresented: $viewModel.didAuthenticateUser) {
+            ProfilePhotoSelector().navigationBarBackButtonHidden()
+        }
     }
 }
 
