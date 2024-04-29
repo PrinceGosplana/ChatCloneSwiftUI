@@ -17,7 +17,7 @@ struct SettingsHeader: View {
 
     var body: some View {
             HStack {
-                Image(.profilePicture)
+                Image(user.profileImageUrl)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 64, height: 65)

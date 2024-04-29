@@ -33,6 +33,7 @@ final class AuthManager: NSObject, ObservableObject {
         do {
             let uid = try await service.logIn(withEmail: email, password: password)
             userSession = true
+            await fetchUser()
         } catch {
             print("Error with user login \(error.localizedDescription)")
         }
