@@ -13,8 +13,10 @@ struct ConversationsView: View {
     @State private var showChatView = false
     @State private var selectedUser: User?
     @ObservedObject var viewModel: ConversationsViewModel
+    private let currentUser: User
 
     init(currentUser: User) {
+        self.currentUser = currentUser
         viewModel = ConversationsViewModel(currentUser: currentUser)
     }
 
@@ -25,29 +27,33 @@ struct ConversationsView: View {
                 ScrollView {
                     VStack(alignment: .leading) {
 
-                        ForEach(User.mockUsers) { user in
-                            NavigationLink {
-                                ChatView(user: user, currentUser: authManager.currentUser ?? User.mockUsers[0])
-                            } label: {
+                        ForEach(viewModel.recentMessages) { user in
+//                            NavigationLink {
+//                                ChatView(user: user, currentUser: currentUser)
+//                            } label: {
                                 ConversationCell()
-                            }
+//                            }
                         }
                     }
                 }
 
-                Button {
-                    showNewMessage.toggle()
-                } label: {
-                    Image(systemName: "square.and.pencil")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 24, height: 24)
-                        .padding()
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        showNewMessage.toggle()
+                    } label: {
+                        Image(systemName: "square.and.pencil")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 24, height: 24)
+                            .padding()
+                    }
+                    .background(Color(.systemBlue))
+                    .foregroundStyle(.white)
+                    .clipShape(Circle())
+                    .padding()
                 }
-                .background(Color(.systemBlue))
-                .foregroundStyle(.white)
-                .clipShape(Circle())
-                .padding()
                 .sheet(isPresented: $showNewMessage) {
                     NewMessage(
                         showChatView: $showChatView,
