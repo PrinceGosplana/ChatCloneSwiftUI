@@ -48,6 +48,7 @@
 		8AD92E8A2BDFCC6E0099F2BB /* MockAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */; };
 		8AD92E8C2BDFE42C0099F2BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8B2BDFE42C0099F2BB /* User.swift */; };
 		8AD92E8E2BE014200099F2BB /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */; };
+		8AD92E922BE10B030099F2BB /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E912BE10B030099F2BB /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		8AD92E892BDFCC6E0099F2BB /* MockAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthService.swift; sourceTree = "<group>"; };
 		8AD92E8B2BDFE42C0099F2BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
+		8AD92E912BE10B030099F2BB /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				8AD09DF02BDA8855008E56D1 /* StatusViewModel.swift */,
 				8AD92E7B2BDE6D290099F2BB /* AuthManager.swift */,
 				8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */,
+				8AD92E912BE10B030099F2BB /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				8AD09DFB2BDB8574008E56D1 /* NewMessage.swift in Sources */,
 				8AD09DFF2BDB98AD008E56D1 /* SearchBar.swift in Sources */,
 				8AD09E072BDBB059008E56D1 /* CustomInput.swift in Sources */,
+				8AD92E922BE10B030099F2BB /* MessageViewModel.swift in Sources */,
 				8AD09DEF2BDA83E3008E56D1 /* StatusCell.swift in Sources */,
 				8AD09DE52BDA4D80008E56D1 /* SettingsType.swift in Sources */,
 				8AD09DE32BDA43B3008E56D1 /* SettingsCell.swift in Sources */,

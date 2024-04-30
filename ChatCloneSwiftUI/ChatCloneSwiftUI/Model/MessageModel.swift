@@ -24,14 +24,14 @@ extension MessageModel {
             id: "Harry-4CC2E6A7-F95C-43C6-A291-A376F23486D6",
             toId: "Hermiona-34A7EFAB-21F5-481F-B586-8E67462D040E",
             read: true,
-            text: "Hey",
+            text: "Hey Herm!",
             timestamp: 1714464787
         ),
         .init(
             id: "Hermiona-34A7EFAB-21F5-481F-B586-8E67462D040E",
             toId: "Harry-4CC2E6A7-F95C-43C6-A291-A376F23486D6",
             read: true,
-            text: "Hey",
+            text: "Hey Harry",
             timestamp: 1714464789
         ),
         .init(
@@ -59,7 +59,7 @@ extension MessageModel {
             id: "Artur-4F34B235-6A97-4C98-9EB0-DDCD15D4B996",
             toId: "Harry-4CC2E6A7-F95C-43C6-A291-A376F23486D6",
             read: true,
-            text: "Hey",
+            text: "Hey! Go ahead",
             timestamp: 1714464797
         ),
         .init(

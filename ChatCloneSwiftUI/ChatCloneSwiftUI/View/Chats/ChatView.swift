@@ -12,9 +12,11 @@ struct ChatView: View {
     @State private var messageText = ""
     @ObservedObject var viewModel: ChatViewModel
     private let user: User
+    private let currentUser: User
 
-    init(user: User, currentUser: User?) {
+    init(user: User, currentUser: User) {
         self.viewModel = ChatViewModel(toUser: user, currentUser: currentUser)
+        self.currentUser = currentUser
         self.user = user
     }
 
@@ -22,11 +24,8 @@ struct ChatView: View {
         VStack(spacing: 0.1) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
-                    ForEach(viewModel.messages) { message in
-//                        Message(
-//                            isFromCurrentUser: message.isFromCurrentUser,
-//                            message: message.messageText
-//                        )
+                    ForEach(viewModel.messages, id: \.timestamp) { message in
+                        Message(viewModel: MessageViewModel(message: message, currentUser: currentUser, partnerUser: user))
                     }
                 }
             }

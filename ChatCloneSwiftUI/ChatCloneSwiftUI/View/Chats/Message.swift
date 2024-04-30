@@ -9,36 +9,35 @@ import SwiftUI
 
 struct Message: View {
 
-    var isFromCurrentUser: Bool
-    var message: String
+    let viewModel: MessageViewModel
 
     var body: some View {
         HStack {
-            if isFromCurrentUser {
+            if viewModel.isFromCurrentUser {
 
                 Spacer()
 
-                Text(message)
+                Text(viewModel.message.text)
                     .padding(12)
                     .background(Color(.systemBlue))
                     .font(.callout)
-                    .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
+                    .clipShape(ChatBubble(isFromCurrentUser: viewModel.isFromCurrentUser))
                     .foregroundStyle(.white)
                     .padding(.leading, 100)
                     .padding(.horizontal)
             } else {
                 HStack(alignment: .bottom) {
-                    Image(.profilePicture)
+                    Image(viewModel.partnerUser.profileImageUrl)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 32, height: 32)
                         .clipShape(Circle())
 
-                    Text(message)
+                    Text(viewModel.message.text)
                         .padding(12)
                         .background(Color(.systemGray5))
                         .font(.callout)
-                        .clipShape(ChatBubble(isFromCurrentUser: isFromCurrentUser))
+                        .clipShape(ChatBubble(isFromCurrentUser: viewModel.isFromCurrentUser))
                         .foregroundStyle(.black)
                 }
                 .padding(.horizontal)
@@ -51,5 +50,5 @@ struct Message: View {
 }
 
 #Preview {
-    Message(isFromCurrentUser: true, message: "Test")
+    Message(viewModel: MessageViewModel(message: MessageModel.mockMessages[0], currentUser: User.mockUsers[0], partnerUser: User.mockUsers[1]))
 }

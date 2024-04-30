@@ -16,7 +16,7 @@ class ChatViewModel: ObservableObject {
     init(toUser: User, currentUser: User?) {
         self.toUser = toUser
         self.currentUser = currentUser
-        messages = fetchMessages()
+        fetchMessages()
     }
 
     func sendMessage(_ messageText: String) {
@@ -37,11 +37,17 @@ class ChatViewModel: ObservableObject {
 //        chatPartnerRef.document(currentUser.id).setData(data)
     }
 
-    private func fetchMessages() -> [MessageModel] {
-        guard let currentUser else { return [] }
-        let messages = MessageModel.mockMessages.filter { $0.id == currentUser.id || $0.toId == currentUser.id  }
-        let messages2 = messages.filter { $0.toId == toUser.id || $0.id == toUser.id  }
+    private func fetchMessages() {
+        guard let currentUser else { return }
+//        let query = .document(currentUser.id).collection(toUser.id)
+//
+//        query.getDocuments { snapshot, error in
+//            guard let documents = snapshot?.documents else { return }
+//            messages = documents.compactMap { try? $0.data(as: MessageModel.self) }
+//        }
+
+        let currentUserMessages = MessageModel.mockMessages.filter { $0.id == currentUser.id || $0.toId == currentUser.id  }
+        messages = currentUserMessages.filter { $0.toId == toUser.id || $0.id == toUser.id  }
             .sorted { $0.timestamp < $1.timestamp }
-        return messages2
     }
 }
