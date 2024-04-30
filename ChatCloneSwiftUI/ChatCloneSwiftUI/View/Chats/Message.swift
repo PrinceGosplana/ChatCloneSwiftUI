@@ -27,7 +27,7 @@ struct Message: View {
                     .padding(.horizontal)
             } else {
                 HStack(alignment: .bottom) {
-                    Image(viewModel.partnerUser.profileImageUrl)
+                    Image(viewModel.profileImageUrl)
                         .resizable()
                         .scaledToFill()
                         .frame(width: 32, height: 32)

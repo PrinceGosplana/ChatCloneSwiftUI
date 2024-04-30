@@ -47,7 +47,12 @@ class ChatViewModel: ObservableObject {
 //        }
 
         let currentUserMessages = MessageModel.mockMessages.filter { $0.id == currentUser.id || $0.toId == currentUser.id  }
-        messages = currentUserMessages.filter { $0.toId == toUser.id || $0.id == toUser.id  }
+        var sortedMessages = currentUserMessages.filter { $0.toId == toUser.id || $0.id == toUser.id  }
             .sorted { $0.timestamp < $1.timestamp }
+
+        for (index, message) in sortedMessages.enumerated() where message.id != currentUser.id {
+            sortedMessages[index].user = self.toUser
+        }
+        self.messages = sortedMessages
     }
 }

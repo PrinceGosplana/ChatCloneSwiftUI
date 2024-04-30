@@ -11,7 +11,7 @@ struct ConversationCell: View {
     var body: some View {
         VStack {
             HStack {
-                Image(systemName: "person.circle")
+                Image(.profile)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 48, height: 48)

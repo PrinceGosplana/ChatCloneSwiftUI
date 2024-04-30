@@ -15,4 +15,8 @@ struct MessageViewModel {
     var isFromCurrentUser: Bool {
         message.id == currentUser.id
     }
+
+    var profileImageUrl: String {
+        message.user?.profileImageUrl ?? "profile"
+    }
 }

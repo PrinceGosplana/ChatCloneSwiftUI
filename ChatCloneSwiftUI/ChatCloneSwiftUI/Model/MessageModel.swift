@@ -16,6 +16,8 @@ struct MessageModel: Identifiable {
     let read: Bool
     let text: String
     let timestamp: Int
+
+    var user: User?
 }
 
 extension MessageModel {
