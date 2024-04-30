@@ -10,10 +10,11 @@ import SwiftUI
 struct ChatView: View {
 
     @State private var messageText = ""
-    @ObservedObject var viewModel = ChatViewModel()
+    @ObservedObject var viewModel: ChatViewModel
     private let user: User
 
-    init(user: User) {
+    init(user: User, currentUser: User?) {
+        self.viewModel = ChatViewModel(toUser: user, currentUser: currentUser)
         self.user = user
     }
 
@@ -42,5 +43,5 @@ struct ChatView: View {
 }
 
 #Preview {
-    ChatView(user: User.mockUsers[2])
+    ChatView(user: User.mockUsers[2], currentUser: User.mockUsers[0])
 }

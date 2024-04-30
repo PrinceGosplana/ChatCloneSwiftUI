@@ -22,7 +22,7 @@ struct ConversationsView: View {
 
                         ForEach(User.mockUsers) { user in
                             NavigationLink {
-                                ChatView(user: user)
+                                ChatView(user: user, currentUser: authManager.currentUser)
                             } label: {
                                 ConversationCell()
                             }
@@ -53,7 +53,7 @@ struct ConversationsView: View {
                     )
                 }
                 .navigationDestination(item: $selectedUser) { user in
-                    ChatView(user: user)
+                    ChatView(user: user, currentUser: authManager.currentUser)
                 }
             }
         }
