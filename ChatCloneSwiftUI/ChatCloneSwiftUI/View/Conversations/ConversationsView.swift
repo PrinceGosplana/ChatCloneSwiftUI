@@ -11,16 +11,18 @@ struct ConversationsView: View {
 
     @State private var showNewMessage = false
     @State private var showChatView = false
+    @State private var selectedUser: User?
 
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
+
                 ScrollView {
                     VStack(alignment: .leading) {
 
-                        ForEach((0 ... 10), id: \.self) { _ in
+                        ForEach(User.mockUsers) { user in
                             NavigationLink {
-                                ChatView()
+                                ChatView(user: user)
                             } label: {
                                 ConversationCell()
                             }
@@ -42,7 +44,10 @@ struct ConversationsView: View {
                 .clipShape(Circle())
                 .padding()
                 .sheet(isPresented: $showNewMessage) {
-                    NewMessage(showChatView: $showChatView)
+                    NewMessage(showChatView: $showChatView, user: $selectedUser)
+                }
+                .navigationDestination(item: $selectedUser) { user in
+                    ChatView(user: user)
                 }
             }
         }

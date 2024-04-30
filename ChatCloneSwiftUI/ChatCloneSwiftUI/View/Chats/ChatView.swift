@@ -11,6 +11,11 @@ struct ChatView: View {
 
     @State private var messageText = ""
     @ObservedObject var viewModel = ChatViewModel()
+    private let user: User
+
+    init(user: User) {
+        self.user = user
+    }
 
     var body: some View {
         VStack(spacing: 0.1) {
@@ -26,7 +31,7 @@ struct ChatView: View {
             }
             CustomInput(text: $messageText, action: sendMessage)
         }
-        .navigationTitle("Conversation")
+        .navigationTitle(user.userName)
         .navigationBarTitleDisplayMode(.inline)
     }
 
@@ -37,5 +42,5 @@ struct ChatView: View {
 }
 
 #Preview {
-    ChatView()
+    ChatView(user: User.mockUsers[2])
 }

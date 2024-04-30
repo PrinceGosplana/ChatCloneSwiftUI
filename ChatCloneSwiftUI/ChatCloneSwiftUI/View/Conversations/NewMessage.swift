@@ -12,7 +12,7 @@ struct NewMessage: View {
     @State private var isEditing = false
     @Binding var showChatView: Bool
     @ObservedObject var viewModel = NewMessageViewModel()
-
+    @Binding var user: User?
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
@@ -27,6 +27,7 @@ struct NewMessage: View {
                 ForEach(viewModel.users) { user in
                     Button {
                         showChatView.toggle()
+                        self.user = user
                         dismiss()
                     } label: {
                         UserCell(user: user)
@@ -38,5 +39,5 @@ struct NewMessage: View {
 }
 
 #Preview {
-    NewMessage(showChatView: .constant(false))
+    NewMessage(showChatView: .constant(false), user: .constant(User.mockUsers[6]))
 }
