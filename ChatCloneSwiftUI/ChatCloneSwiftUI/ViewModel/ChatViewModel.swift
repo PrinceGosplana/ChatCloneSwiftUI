@@ -35,12 +35,33 @@ class ChatViewModel: ObservableObject {
 //
 //        chatPartnerRef.setData(data)
 //        chatPartnerRef.document(currentUser.id).setData(data)
+
+        let message = MessageModel(
+            id: currentUser.id,
+            toId: toUser.id,
+            read: false,
+            text: messageText,
+            timestamp: Int(
+                Date().timeIntervalSinceNow
+            ),
+            user: toUser
+        )
+        messages.append(message)
     }
 
     private func fetchMessages() {
         guard let currentUser else { return }
 //        let query = .document(currentUser.id).collection(toUser.id)
+//            .order(by: "timestamp", descending: false)
 //
+//        query.addSnapshotListener { snapshot, _ in
+//            guard let changes = snapshot?.documentChanges.filter({ $0.type == .added }) else { return }
+//        var message = changes.compactMap{ try? $0.document.data(as: Message.self)}
+//        for (index, message) in messages.enumerated() where message.id != currentUser.id {
+//            messages[index].user = self.toUser
+//        }
+//        self.messages.append(contentsOf: messages)
+//        }
 //        query.getDocuments { snapshot, error in
 //            guard let documents = snapshot?.documents else { return }
 //            messages = documents.compactMap { try? $0.data(as: MessageModel.self) }

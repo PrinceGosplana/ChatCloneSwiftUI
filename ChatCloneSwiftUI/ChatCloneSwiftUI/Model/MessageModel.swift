@@ -44,6 +44,13 @@ extension MessageModel {
             timestamp: 1714464816
         ),
         .init(
+            id: "Harry-4CC2E6A7-F95C-43C6-A291-A376F23486D6" ,
+            toId: "Hermiona-34A7EFAB-21F5-481F-B586-8E67462D040E",
+            read: true,
+            text: "Just wondering",
+            timestamp: 1714464818
+        ),
+        .init(
             id: "Hermiona-34A7EFAB-21F5-481F-B586-8E67462D040E",
             toId: "Harry-4CC2E6A7-F95C-43C6-A291-A376F23486D6",
             read: true,
