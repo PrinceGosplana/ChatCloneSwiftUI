@@ -12,6 +12,11 @@ struct ConversationsView: View {
     @State private var showNewMessage = false
     @State private var showChatView = false
     @State private var selectedUser: User?
+    @ObservedObject var viewModel: ConversationsViewModel
+
+    init(currentUser: User) {
+        viewModel = ConversationsViewModel(currentUser: currentUser)
+    }
 
     var body: some View {
         NavigationStack {
@@ -61,5 +66,6 @@ struct ConversationsView: View {
 }
 
 #Preview {
-    ConversationsView()
+    ConversationsView(currentUser: User.mockUsers[1])
+        .environmentObject(AuthManager(service: MockAuthService()))
 }

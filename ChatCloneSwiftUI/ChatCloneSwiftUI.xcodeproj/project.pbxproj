@@ -49,6 +49,7 @@
 		8AD92E8C2BDFE42C0099F2BB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8B2BDFE42C0099F2BB /* User.swift */; };
 		8AD92E8E2BE014200099F2BB /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */; };
 		8AD92E922BE10B030099F2BB /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E912BE10B030099F2BB /* MessageViewModel.swift */; };
+		8AD92E942BE138AD0099F2BB /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD92E932BE138AD0099F2BB /* ConversationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		8AD92E8B2BDFE42C0099F2BB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
 		8AD92E912BE10B030099F2BB /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		8AD92E932BE138AD0099F2BB /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				8AD92E7B2BDE6D290099F2BB /* AuthManager.swift */,
 				8AD92E8D2BE014200099F2BB /* NewMessageViewModel.swift */,
 				8AD92E912BE10B030099F2BB /* MessageViewModel.swift */,
+				8AD92E932BE138AD0099F2BB /* ConversationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD09DEC2BDA8189008E56D1 /* UserStatus.swift in Sources */,
+				8AD92E942BE138AD0099F2BB /* ConversationsViewModel.swift in Sources */,
 				8AD92E8E2BE014200099F2BB /* NewMessageViewModel.swift in Sources */,
 				8AD09E032BDBA541008E56D1 /* ChatBubble.swift in Sources */,
 				8AD09DEA2BDA774F008E56D1 /* StatusSelector.swift in Sources */,

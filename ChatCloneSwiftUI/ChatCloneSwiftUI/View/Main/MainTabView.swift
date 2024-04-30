@@ -17,7 +17,7 @@ struct MainTabView: View {
         if let user = authManager.currentUser {
             NavigationStack {
                 TabView(selection: $selectedIndex) {
-                    ConversationsView()
+                    ConversationsView(currentUser: user)
                         .tabItem { Image(systemName: "bubble.left") }
                         .tag(SelectedTab.conversations)
                         .onTapGesture { selectedIndex = .conversations }
