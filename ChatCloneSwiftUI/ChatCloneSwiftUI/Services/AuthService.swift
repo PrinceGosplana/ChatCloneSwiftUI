@@ -51,6 +51,6 @@ actor AuthService: AuthServiceProtocol {
     }
 
     func fetchUser() async throws -> User {
-        User.mockUsers[2]
+        User.mockUsers.randomElement() ?? User.mockUsers[0]
     }
 }

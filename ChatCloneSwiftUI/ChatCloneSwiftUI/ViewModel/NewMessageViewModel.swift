@@ -10,13 +10,16 @@ import SwiftUI
 
 final class NewMessageViewModel: ObservableObject {
     @Published var users = [User]()
+    
+    private let currentUser: User?
 
-    init() {
+    init(currentUser: User?) {
+        self.currentUser = currentUser
         fetchUsers()
     }
 
     func fetchUsers() {
 //        Firestore.firestore().collection
-        users = User.mockUsers
+        users = User.mockUsers.filter { $0.id != currentUser?.id }
     }
 }

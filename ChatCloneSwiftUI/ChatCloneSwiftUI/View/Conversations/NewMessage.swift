@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct NewMessage: View {
+    @EnvironmentObject var authManager: AuthManager
     @State private var searchText = ""
     @State private var isEditing = false
     @Binding var showChatView: Bool
-    @ObservedObject var viewModel = NewMessageViewModel()
+    @ObservedObject var viewModel: NewMessageViewModel
     @Binding var user: User?
     @Environment(\.dismiss) var dismiss
 
@@ -39,5 +40,12 @@ struct NewMessage: View {
 }
 
 #Preview {
-    NewMessage(showChatView: .constant(false), user: .constant(User.mockUsers[6]))
+    NewMessage(
+        showChatView: .constant(false),
+        viewModel: NewMessageViewModel(
+            currentUser: 
+                User.mockUsers[0]
+        ),
+        user: .constant(User.mockUsers[6])
+    )
 }

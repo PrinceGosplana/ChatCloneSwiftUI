@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ConversationsView: View {
-
+    @EnvironmentObject var authManager: AuthManager
     @State private var showNewMessage = false
     @State private var showChatView = false
     @State private var selectedUser: User?
@@ -44,7 +44,13 @@ struct ConversationsView: View {
                 .clipShape(Circle())
                 .padding()
                 .sheet(isPresented: $showNewMessage) {
-                    NewMessage(showChatView: $showChatView, user: $selectedUser)
+                    NewMessage(
+                        showChatView: $showChatView,
+                        viewModel: NewMessageViewModel(
+                            currentUser: authManager.currentUser
+                        ),
+                        user: $selectedUser
+                    )
                 }
                 .navigationDestination(item: $selectedUser) { user in
                     ChatView(user: user)
