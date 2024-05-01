@@ -25,7 +25,7 @@ struct ChatView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 12) {
                     ForEach(viewModel.messages, id: \.timestamp) { message in
-                        Message(viewModel: MessageViewModel(message: message, currentUser: currentUser, partnerUser: user))
+                        Message(viewModel: MessageViewModel(message: message, currentUser: currentUser))
                     }
                 }
             }

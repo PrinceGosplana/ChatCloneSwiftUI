@@ -27,11 +27,13 @@ struct Message: View {
                     .padding(.horizontal)
             } else {
                 HStack(alignment: .bottom) {
-                    Image(viewModel.profileImageUrl)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 32, height: 32)
-                        .clipShape(Circle())
+                    if let profileImageUrl = viewModel.message.user?.profileImageUrl {
+                        Image(profileImageUrl)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .clipShape(Circle())
+                    }
 
                     Text(viewModel.message.text)
                         .padding(12)
@@ -50,5 +52,5 @@ struct Message: View {
 }
 
 #Preview {
-    Message(viewModel: MessageViewModel(message: MessageModel.mockMessages[0], currentUser: User.mockUsers[0], partnerUser: User.mockUsers[1]))
+    Message(viewModel: MessageViewModel(message: MessageModel.mockMessages[0], currentUser: User.mockUsers[0]))
 }

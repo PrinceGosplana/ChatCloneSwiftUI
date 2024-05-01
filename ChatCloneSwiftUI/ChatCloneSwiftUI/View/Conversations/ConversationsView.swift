@@ -27,19 +27,19 @@ struct ConversationsView: View {
                 ScrollView {
                     VStack(alignment: .leading) {
 
-                        ForEach(viewModel.recentMessages) { user in
-//                            NavigationLink {
-//                                ChatView(user: user, currentUser: currentUser)
-//                            } label: {
-                                ConversationCell()
-//                            }
+                        ForEach(viewModel.recentMessages) { message in
+                            NavigationLink {
+                                ChatView(user: selectedUser ?? User.mockUsers[0], currentUser: currentUser)
+                            } label: {
+                                ConversationCell(viewModel: MessageViewModel(message: message, currentUser: currentUser))
+                            }
                         }
                     }
                 }
 
                 HStack {
                     Spacer()
-                    
+
                     Button {
                         showNewMessage.toggle()
                     } label: {

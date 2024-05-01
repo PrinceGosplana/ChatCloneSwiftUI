@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct ConversationCell: View {
+    let viewModel: MessageViewModel
+
     var body: some View {
         VStack {
             HStack {
-                Image(.profile)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 48, height: 48)
-                    .clipShape(Circle())
-
+                if let profileImageUrl = viewModel.message.user?.profileImageUrl {
+                    Image(profileImageUrl)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 48, height: 48)
+                        .clipShape(Circle())
+                }
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Edddie Brock")
+                    Text(viewModel.message.user?.fullName ?? "")
                         .font(.subheadline)
                         .fontWeight(.semibold)
 
-                    Text("This is some test messgae for now...")
+                    Text(viewModel.message.text)
                         .font(.footnote)
                 }
 
@@ -38,5 +41,10 @@ struct ConversationCell: View {
 }
 
 #Preview {
-    ConversationCell()
+    ConversationCell(
+        viewModel: MessageViewModel(
+            message: MessageModel.mockMessages[0],
+            currentUser: User.mockUsers[0]
+        )
+    )
 }
